@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './css/RegistrationForm.css';
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_URL = process.env.REACT_APP_API_URL;
 
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
@@ -166,5 +166,6 @@ const RegistrationForm = () => {
         </div>
     );
 };
+
 
 export default RegistrationForm;
